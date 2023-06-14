@@ -5,8 +5,8 @@ from PIL import Image
 class ImgReader:
     def __init__(self):
         self.img_name = "01.png"
-        self.base_path = "/Users/harshit/gitrepos/personal/MyPhotos/imageReader/image-store"
-
+        # self.base_path = "/Users/harshit/gitrepos/personal/MyPhotos/imageReader/image-store"
+        self.base_path = "/usr/src/MyPhotos/imageReader/image-store"
     def read_image(self):
         im = Image.open(self.base_path+"/"+self.img_name)
         return {
