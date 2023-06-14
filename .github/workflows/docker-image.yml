@@ -10,4 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag myphotosserver:$(date +%s)
+      run: docker build . --file Dockerfile --tag myphotos:${{ github.run_number }}
+    - name: Push Docker image to ghcr.io
+      run: docker push ghcr.io/NAMESPACE/myphotos:${{ github.run_number }}
